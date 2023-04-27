@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Freightos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/20c5629a29.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="celiritynew.css" />
+    <script src="celirityc_chatbot.js"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger>
+      intent="Book_shipment"
+      chat-title="Freightos Chatbot"
+      agent-id="Celirity"
+      language-code="en"
+      project-id="celirity-tdmx"
+    </df-messenger>
+  </head>
+
+  <body>
+    <div class="bgcolor">
+        <header>
+          <div class="d-flex flex-row justify-content-between">
+            <h1>
+              Ship<span id="shipmate">mate</span>
+            </h1>
+          </div>
+        </header>
+            <!--Process steps indicator-->
+                <div class="wrapper">
+                    <div class="main-container">
+                        <div class="steps-container">
+                            <div class="step completed">
+                                <div class="label completed">
+                                    Search
+                                </div>
+                                <div class="icon completed">
+                                    <div class="number">1</div>
+                                </div>
+                            </div>
+                            <div class="line completed"></div>
+                                <div class="step completed">
+                                    <div class="label completed">
+                                        Recommended Services
+                                    </div>
+                                    <div class="icon completed">
+                                        <div class="number">2</div>
+                                    </div>
+                                </div>
+                        
+                            <div class="line next-step-in-progress"> </div>
+                            <div class="step in-progress">
+                                <div class="label loading">
+                                    Results
+                                </div>
+                                <div class="icon completed">
+                                    <div class="number">3</div>
+                                </div>
+                            </div>
+                            <div class="line prev-step-in-progress"></div>
+                            <div class="step">
+                                <div class="label">
+                                    Booking
+                                </div>
+                                <div class="icon completed">
+                                    <div class="number">4</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards -->
+
+            <div class="d-flex flex-row justify-content-around">
+                <div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">booking summary</h4>
+                            <h6 style="text-align:center">Express </h6>
+                            <div class="aeroicon">
+                                <i class="bi bi-airplane"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi airplane" viewBox="0 0 16 16">
+                                    <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Zm.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1c-.213 0-.458.158-.678.599Z"/>
+                                </svg>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <div>
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <hr color="black" width="400" align="center">
+                                </div>
+                                <div>
+                                    <i class="bi bi-house-check-fill"></i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-check-fill" viewBox="0 0 16 16">
+                                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
+                                        <path d="m8 3.293 4.712 4.712A4.5 4.5 0 0 0 8.758 15H3.5A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
+                                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.707l.547.547 1.17-1.951a.5.5 0 1 1 .858.514Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 style="text-align:center"> Total Weight </h4>
+                                    <div style="text-align:center">
+                                        <i class="bi bi-boxes icon"></i>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+                                            <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z"/>
+                                        </svg>
+                                    </div>
+                                    <p style="text-align:center"><b>114.12kg</b></p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Load</h4>
+                                    <div class="d-flex flex-row justify-content-around">
+                                        <div>
+                                            <p><b> 1 X </b></p>
+                                        </div>
+                                        <div>
+                                            <i class="bi bi-layout-three-columns"></i>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-three-columns" viewBox="0 0 16 16">
+                                                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0h13A1.5 1.5 0 0 1 16 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13zM1.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5H5V1H1.5zM10 15V1H6v14h4zm1 0h3.5a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5H11v14z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="card-text" style="text-align:center">
+                                        230 X 140 X 120
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+      
+                        <div class="d-flex flex-row justify-content-between">
+                            <div class="card">
+                                <div class="card-body" style="text-align:center">
+                                    <h4 class="card-title">Seller: Prime time World Wide</h4>
+                                    <img src="https://media.istockphoto.com/id/1066762856/photo/aerial-view-top-speed-with-beautiful-wave-of-container-ship-full-load-container-with-crane.jpg?s=612x612&w=0&k=20&c=2QvFt7T-vb6nUrrm0cI42s9zYDgOjZy-YeMpMNuSa9Y=" class="image" attribute=""/>
+                                </div>
+                            </div>
+
+                    
+                            <div class="card">
+                                <div class="card-body" style="text-align:center">
+                                    <h4 class="card-title"> Insurance: Xcover.com</h4>
+                                    <img src="https://www.xcover.com/r-201173/static/media/logo.bb326494.svg" class="image"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+      
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-row">
+                                <h1 class="mr-4"> Price details </h1>
+                                <p > * Know shipper </p>
+                            </div>
+                            <h4> Sellers Quote </h4>
+                            <hr style="border-color: grey;">
+                            <div class="d-flex flex-row justify-content-between">
+                                <p> Duties and Taxes </p>
+                                <p> Not included </p>
+                            </div>
+                            <div class="d-flex flex-row justify-content-between">
+                                <div>
+                                    <p> insurance <br>
+                                    Based on the Items cost </p>
+                                </div>
+                                <p> $323.40 </p>
+                            </div>
+
+                            <hr style="border-color: grey;">
+
+                            <p> Add a Promo code </p>
+                            <div class="d-flex flex-row justify-content-between">
+                                <p>platform fee </p>
+                                <p> $119.48 </p>
+                            </div>
+                            <hr style="border-color: grey;">
+                            <div class="d-flex flex-row justify-content-between">
+                                <h1> Total:</h1>
+                                <h1> $ 4,102.13</h1>
+                            </div>
+                            <div style="text-align:center">
+                                <button onclick="window.location.href='celiritynew2.html'"> Check out </button>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+    </div>
+  </body>

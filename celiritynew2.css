@@ -1,0 +1,168 @@
+.bgcolor{
+    background-color: lightblue;
+   
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  #shipmate {
+    font-size: 32px;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  button {
+    background-color: transparent;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin:10px;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+.card{
+    width:fit-content;
+    height:auto;
+    margin-left:100px;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+
+:root {
+    --background-modal-color: #fff;
+    --body-color: #fff;
+    --color-timeline-default: #D2D3D8;
+  
+  }
+  
+  .wrapper {
+    font-family: "Muli", sans-serif;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    width: 100vw;
+    height:0vh;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .main-container {
+    
+    justify-content: center;
+    flex-grow: 1;
+    border-radius: 5px;
+   
+  }
+  .main-container .steps-container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .steps-container .step {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 0;
+    border: 4px solid var(--color-timeline-default);
+    border-radius: 50%;
+  }
+  
+  .main-container .steps-container .step .label {
+    position: absolute;
+    top: 30px;
+    filter: none;
+    z-index: 2000;
+    color: var(--color-label-default);
+    transition: all 200ms ease;
+    font-weight: 700;
+  }
+  .main-container .steps-container .step .label.completed {
+    color: var(--color-label-completed);
+  }
+  .main-container .steps-container .step .icon.completed {
+    color: var(--color-icon-completed);
+  }
+  .main-container .steps-container .step .icon.in-progress {
+    color: var(--color-in-progress);
+  }
+  .main-container .steps-container .line {
+    transition: all 200ms ease;
+    height: 2px;
+    flex-grow: 1;
+    max-width: 120px;
+    background: var(--color-timeline-default);
+  }
+  
+  .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .shipment_card {
+    background-color: #fff;
+    margin:100px;
+    padding:5px;
+    border-radius: 15px;
+  }
+
+  .dropdown-toggle {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  .price-card{
+    background-color: #1773b5;
+    border-radius: 15px;
+    padding:0px;
+  }
+  .bestv{
+    background-color:#fff;
+    border-radius: 15px;
+    
+  }
+
+  .imgship{
+    width: 10px;
+    height:6px;
+  }
+.detail-card{
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top:30px;
+    padding:15px;
+}
+  
